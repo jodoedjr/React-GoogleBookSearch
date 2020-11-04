@@ -1,6 +1,6 @@
 const path = require("path");
-const bookController = require("../../Main/controllers/bookController");
-const googleController = require("../../Main/controllers/googleController");
+const bookController = require("../controllers/bookController")
+const googleController = require("../controllers/googleController");
 const router = require("express").Router();
 
 //API Routes
@@ -22,10 +22,16 @@ router.route("/api/books/:id")
 router.route("/api/google")
     .get(googleController.findAll);
 
+router.route("/api/google/test")
+    .get((req, res, next) => {
+        res.json("TEST");
+    });
+
 //React App
 //for everything else, send the React app html page
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+router.use((req, res) => {
+    res.json("Hit the catch all")
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 module.exports = router;
