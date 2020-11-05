@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
+import NoMatch from "./pages/NoMatch";
+import MyNavBar from "./components/MyNavBar";
 import './App.css';
+import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
-  // API.getBooks("Left Hand").then(res=>console.log(res))
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+    <BrowserRouter>
+    <MyNavBar/>
+      <Switch>
+        <Route exact path={["/", "/index", "/search"]}><Search/></Route>
+        <Route exact path={["/saved"]}><Saved/></Route>
+        <Route><NoMatch/></Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
