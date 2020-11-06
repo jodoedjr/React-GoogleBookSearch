@@ -1,0 +1,24 @@
+.btn-margin {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.font-italic {
+    font-style: italic
+}
+
+.desc-box {
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 750px){
+    .desc-box {
+        padding-left: 25px;
+    }
+}
+@media screen and (max-width: 600px){
+    .desc-box {
+        padding-left: 0px;
+    }
+}
