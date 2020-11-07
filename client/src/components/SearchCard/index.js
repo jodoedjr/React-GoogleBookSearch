@@ -1,15 +1,15 @@
 import React from "react";
-import M from "materialize-css";
+// import M from "materialize-css";
 import { CardPanel, TextInput, Button, Icon } from "react-materialize";
 
 const SearchCard = ({q, getBooks, handleInputChange}) => {
     return (
-        <CardPanel className="red lighten-5">
+        <CardPanel className="grey lighten-3">
                 <h6 className="red-text lighten-2">Book Search!</h6>
                 <TextInput 
                 id="Title" 
                 label="Book Title" 
-                value={q}
+                value={q} 
                 name="q"
                 onChange={(event)=>handleInputChange(event)}
                 />

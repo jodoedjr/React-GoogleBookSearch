@@ -48,13 +48,13 @@ module.exports = {
       .then(apiBooks =>
         db.Book.find().then(dbBooks =>
           apiBooks.filter(apiBook =>
-            dbBooks.every(dbBook => dbBook.googleId.toString() !== apiBook.id).toString()
+            dbBooks.every(dbBook => dbBook.googleId.toString() !== apiBook.id)
           )
         )
       )
       .then(books => {
         res.json(books)
       })
-      .catch(err => { res.status(500).json(err); });
+      .catch(err => { res.status(500).json(err);console.log(err); });
   }
 };

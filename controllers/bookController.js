@@ -14,7 +14,7 @@ module.exports = {
     create: (req, res) => {
         db.Book.create(req.body)
             .then(dbBook => res.json(dbBook))
-            .catch(err => res.status(500).json(err))
+            .catch(err => res.status(500).send(err))
     },
     update: (req, res) => {
         db.Book.findOneAndUpdate({ id: req.params.id }, req.body)
@@ -23,7 +23,7 @@ module.exports = {
     },
     remove: (req, res) => {
         db.Book.findById(req.params.id)
-            .then(dbBook => db.Book.remove())
+            .then(dbBook => dbBook.remove())
             .then(dbBook => res.json(dbBook))
             .catch(err => res.status(404).json(err));
     }

@@ -6,8 +6,9 @@ import { Navbar, Icon } from "react-materialize";
 const MyNavBar = (props) => {
     return (
         <Navbar
+            className="cyan lighten-2"
             alignLinks="left"
-            brand={<a className="brand-logo" href="#">(R)GBS</a>}
+            brand={<Link className="brand-logo" to="/">(R)GBS</Link>}
             centerLogo
             id="mobile-nav"
             menuIcon={<Icon>menu</Icon>}
