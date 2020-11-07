@@ -24,7 +24,18 @@ Run `npm install` in the cloned base directory, and run locally (`npm start` exe
 
 ## Usage 
 
+Users can search for books by title on the search page by typing a partial title in the search field and submitting the form.
+![Landing Page](https://github.com/jodoedjr/React-GoogleBookSearch/blob/main/readme_assets/sheltered-peak-59009.herokuapp.com_.png "Book search landing page")
 
+Books can be saved to the database by clicking the 'Save!' button. The 'View!' button links to the GoogleBooks webpage for the book.
+A Toast appears to inform the user of a successful save.
+![Saved a Book](https://github.com/jodoedjr/React-GoogleBookSearch/blob/main/readme_assets/sheltered-peak-59009.herokuapp.com_LeftHand_Saved.png "Saved Left Hand of Darkness")
+
+Saved books appear on the saved books page. This page provides the same 'View!' link, and also a button for 'Delete!' -ing the saved book from the database.
+![Saved Books](https://github.com/jodoedjr/React-GoogleBookSearch/blob/main/readme_assets/sheltered-peak-59009.herokuapp.com_saved.png "Saved Books")
+
+A Toast appears to inform the user of a successful deletion.
+![Deleted a Book](https://github.com/jodoedjr/React-GoogleBookSearch/blob/main/readme_assets/sheltered-peak-59009.herokuapp.com_LeftHand_Deleted.png "Deleted Left Hand of Darkness")
 
 
 ## License
